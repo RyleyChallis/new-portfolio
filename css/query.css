@@ -6,7 +6,8 @@
 
 @media (max-width: 1250px) {
     #packages .row-container,
-    #selected .row-container {
+    #selected .row-container,
+    #process .row-container {
         flex-direction: column;
         gap: 48px;
     }

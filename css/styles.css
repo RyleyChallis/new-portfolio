@@ -9,6 +9,11 @@ html, body {
     width: 100%;
 }
 
+html {
+     width: 100vw;
+     overflow-x: hidden;
+}
+
 body.no-scroll,
 html.no-scroll {
   overflow: hidden;
