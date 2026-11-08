@@ -20,6 +20,8 @@ html.no-scroll {
 }
 
 section {
+    box-sizing: border-box;
+    overflow-x: hidden;
     min-height: 100vh;
 
     &:nth-child(1),
