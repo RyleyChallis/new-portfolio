@@ -401,10 +401,13 @@ img {
                     display: flex;
                     flex-direction: column;
 
-                    a.desktop-only {
+                    a.desktop-btn {
                         margin-top: 24px;
                     }
                 }
+            }
+            a.mobile-btn {
+                display: none;
             }
 
             .selected-image {

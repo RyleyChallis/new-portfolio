@@ -3,7 +3,7 @@
     "title": "Tipsy Kisses | Luxury Mobile Bar",
     "subtitle": "Bespoke digital architecture engineered to capture high-ticket event inquiries and eliminate booking friction.",
     "metrics": "100/100 Lighthouse Performance",
-    "problem": "Local hospitality brands lose high-ticket private bookings due to sluggish, template-based websites.",
+    "problem": "Traditional hospitality sites rely on heavy page builders and bloated WordPress themes. Slow load times and clunky layouts cause high-value private clients to bounce before submitting an inquiry. (Note: Conceptual portfolio project; no formal affiliation with Tipsy Kisses.)",
     "solution": "Engineered a zero-bloat digital foundation using pure HTML, CSS, and Vanilla JavaScript.",
     "images": {
       "hero": "./assets/tipsy.webp"

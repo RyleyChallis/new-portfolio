@@ -13,6 +13,13 @@
     #process .row-container {
         flex-direction: column;
         gap: 48px;
+
+        a.mobile-btn {
+            display: block;
+        }
+        a.desktop-btn {
+            display: none;
+        }
     }
     #selected .desktop-only {
         display: none;
