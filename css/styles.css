@@ -561,7 +561,7 @@ img {
     }
     p {
         color: #a1a1a1;
-        max-width: 45%;
+        max-width: clamp(85%, 70vw, 650px);
         margin: 0 auto;
         text-align: center;
     }
