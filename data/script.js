@@ -56,3 +56,48 @@ document.addEventListener('click', () => {
         sidebarOverlay.classList.remove('active');
     })
 })
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // Grab the project ID from the URL query string (e.g., case-study.html?project=il-cortile)
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get('project');
+
+    if (!projectId) {
+        console.warn('No project specified in URL parameters.');
+        return;
+    }
+
+    try {
+        const response = await fetch('data/pf.json');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const project = data[projectId];
+
+        if (project) {
+            const titleEl = document.getElementById('project-title');
+            const subtitleEl = document.getElementById('project-subtitle');
+            const metricsEl = document.getElementById('project-metrics');
+            const problemEl = document.getElementById('project-problem');
+            const solutionEl = document.getElementById('project-solution');
+            const heroImgEl = document.getElementById('project-hero-img');
+
+            if (titleEl) titleEl.textContent = project.title;
+            if (subtitleEl) subtitleEl.textContent = project.subtitle;
+            if (metricsEl) metricsEl.textContent = project.metrics;
+            if (problemEl) problemEl.textContent = project.problem;
+            if (solutionEl) solutionEl.textContent = project.solution;
+            if (heroImgEl && project.images?.hero) {
+                heroImgEl.src = project.images.hero;
+                heroImgEl.alt = project.title || 'Project Case Study';
+            }
+        } else {
+            console.error(`Project with ID '${projectId}' not found in pf.json.`);
+        }
+    } catch (error) {
+        console.error('Failed to load project data:', error);
+    }
+});
