@@ -647,6 +647,37 @@ img {
     }
 }
 
+/* END OF PORTFOLIO.HTML */
+/* BEGINNING OF PROJECT.HTML */
+
+#challenge {
+    min-height: auto;
+    padding: 75px 0;
+    
+    .main-wrapper {
+        gap: 24px;
+        align-items: flex-start;
+
+        .container {
+            gap: 24px;
+            text-align: left;
+
+            h2 {
+                padding: 0 0 24px 0;
+                margin-right: auto;
+                margin-left: 0;
+                padding-bottom: 0;
+                max-width: clamp(65%, 70vw, 80%);
+            }
+        }
+        img {
+            max-width: 550px;
+            border-radius: 4px;
+            box-shadow: 3px 2px 25px color-mix(in srgb, var(--black) 20%, transparent);
+        }
+    }
+}
+
 /* BEGINNING OF UNIVERSAL FOOTER CSS */ 
 
 footer {

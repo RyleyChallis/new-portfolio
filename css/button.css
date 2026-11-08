@@ -35,7 +35,7 @@
     font-size: var(--fs-btn);
     font-family: var(--ff-body);
     text-transform: uppercase;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-secondary:hover {
@@ -68,10 +68,25 @@
     color: var(--white);
 }
 
-.hero-actions {
+.hero-actions,
+.final-actions {
     display: flex;
     align-items: center;
     gap: 24px;
+    margin: 0 auto;
+
+    .btn-secondary {
+        border: 1.8px solid var(--white);
+        color: var(--white);
+        padding: 15px 23px;
+
+        &:hover {
+            border-color: var(--black);
+            background-color: var(--black);
+            color: var(--white);
+            opacity: 1;
+        }
+    }
 }
 
 #final .btn-tertiary {

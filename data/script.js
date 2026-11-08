@@ -57,8 +57,27 @@ document.addEventListener('click', () => {
     })
 })
 
+const projectData = {
+  "tipsy": {
+    "title": "Tipsy Kisses | Luxury Mobile Bar",
+    "subtitle": "A premier mobile bar service delivering high-end cocktail experiences, bespoke drink menus, and professional bartending for private events and luxury gatherings.",
+    "metrics": "Pure HTML5/CSS3/JS · Zero External Libraries",
+    "problem": "Traditional hospitality sites rely on heavy page builders and bloated WordPress themes. Slow load times and clunky layouts cause high-value clients to bounce before submitting an inquiry.",
+    "solution": "Zero external frameworks or runtime bloat ensure instantaneous page loads, optimised WebP asset delivery, and frictionless lead capture.",
+    "hero": "assets/tipsy.webp"
+  },
+  "cortile": {
+    "title": "Il Cortile | Fine Dining Experience",
+    "subtitle": "An independent Italian restaurant concept rooted in classic courtyard dining, offering artisanal small plates, handmade pasta, and an intimate neighborhood atmosphere.",
+    "metrics": "Zero-Framework Build · Native CSS Layouts",
+    "problem": "High-end dining sites often suffer from slow reservation flows, heavy third-party plugins, and poor mobile responsiveness that degrade the customer experience.",
+    "solution": "Engineered as a zero-bloat web platform with native CSS layout mechanics and fluid typography. Delivers instant menu access and seamless multi-device navigation without sacrificing design prestige or loading speed.",
+    "hero": "assets/cortile1.webp"
+  }
+};
+
+
 document.addEventListener('DOMContentLoaded', async () => {
-    // Grab the project ID from the URL query string (e.g., case-study.html?project=il-cortile)
     const params = new URLSearchParams(window.location.search);
     const projectId = params.get('project');
 
@@ -67,37 +86,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
-    try {
-        const response = await fetch('data/pf.json');
-        
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
+    const project = projectData[projectId];
 
-        const data = await response.json();
-        const project = data[projectId];
+  if (project) {
+    const titleEl = document.getElementById('project-title');
+    const subtitleEl = document.getElementById('project-subtitle');
+    const metricsEl = document.getElementById('project-metrics');
+    const problemEl = document.getElementById('project-problem');
+    const solutionEl = document.getElementById('project-solution');
+    const heroImgEl = document.getElementById('project-hero-img');
 
-        if (project) {
-            const titleEl = document.getElementById('project-title');
-            const subtitleEl = document.getElementById('project-subtitle');
-            const metricsEl = document.getElementById('project-metrics');
-            const problemEl = document.getElementById('project-problem');
-            const solutionEl = document.getElementById('project-solution');
-            const heroImgEl = document.getElementById('project-hero-img');
-
-            if (titleEl) titleEl.textContent = project.title;
-            if (subtitleEl) subtitleEl.textContent = project.subtitle;
-            if (metricsEl) metricsEl.textContent = project.metrics;
-            if (problemEl) problemEl.textContent = project.problem;
-            if (solutionEl) solutionEl.textContent = project.solution;
-            if (heroImgEl && project.images?.hero) {
-                heroImgEl.src = project.images.hero;
-                heroImgEl.alt = project.title || 'Project Case Study';
-            }
-        } else {
-            console.error(`Project with ID '${projectId}' not found in pf.json.`);
-        }
-    } catch (error) {
-        console.error('Failed to load project data:', error);
+    if (titleEl) titleEl.textContent = project.title;
+    if (subtitleEl) subtitleEl.textContent = project.subtitle;
+    if (metricsEl) metricsEl.textContent = project.metrics;
+    if (problemEl) problemEl.textContent = project.problem;
+    if (solutionEl) solutionEl.textContent = project.solution;
+    if (heroImgEl && (project.images?.hero || project.hero)) {
+      heroImgEl.src = project.images?.hero || project.hero;
+      heroImgEl.alt = project.title || 'Project Case Study';
     }
+  } else {
+    console.error(`Project with ID '${projectId}' not found in data.`);
+  }
 });

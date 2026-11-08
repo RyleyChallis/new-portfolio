@@ -10,7 +10,8 @@
 @media (max-width: 1250px) {
     #packages .row-container,
     #selected .row-container,
-    #process .row-container {
+    #process .row-container,
+    #challenge .row-container {
         flex-direction: column;
         gap: 48px;
 
@@ -19,6 +20,18 @@
         }
         a.desktop-btn {
             display: none;
+        }
+        .project-image img {
+            max-width: 100%;
+        }
+    }
+    #challenge {
+        h2 {
+            text-align: center;
+            margin: 0 auto 75px auto !important;
+        }
+        h3 {
+            text-align: center;
         }
     }
     #selected .desktop-only {
