@@ -146,10 +146,6 @@ img {
     interpolate-size: allow-keywords;
 }
 
-::selection {
-    background-color: var(--border);
-}
-
 #hero {
     display: flex;
     flex-direction: column;
@@ -206,7 +202,7 @@ img {
 #trust {
   display: flex;
   overflow: hidden;
-  min-height: 10vh;
+  min-height: 15vh;
   background-color: var(--black);
   width: 100%;
 
@@ -217,6 +213,11 @@ img {
 
     &:hover {
       animation-play-state: paused;
+    }
+
+    h2 {
+        padding: 0;
+        font-size: var(--fs-h3);
     }
   }
 
@@ -345,7 +346,7 @@ img {
 }
 
 #process {
-    min-height: 60vh;
+    min-height: 50vh;
 
     .container {
         .row-container {
@@ -411,11 +412,13 @@ img {
     .container {
         .row-container {
             padding: 0 24px;
-            gap: 12px;
+            gap: 48px;
             align-items: flex-start;
 
             .comparison-card {
-                width: 50%;
+                width: clamp(280px, 42vw, 450px);
+                flex: 1;
+
                 .comparison-header {
                     display: flex;
                     flex-direction: column;
@@ -424,7 +427,6 @@ img {
                         font-size: clamp(0.7rem, 1vw, 0.95rem);
                         font-family: var(--ff-body);
                         font-weight: 550;
-
                         color: var(--grey);
                         opacity: 0.5;
                         text-transform: uppercase;
