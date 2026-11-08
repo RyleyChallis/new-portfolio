@@ -37,13 +37,33 @@
         align-self: auto;
         margin: 40px 0;
     }
-    #selected {
+    #selected,
+    #tipsy,
+    #cortile {
         a.mobile-btn {
             display: block;
             margin: 0 auto;
         }
         a.desktop-btn {
             display: none;
+        }
+    }
+    #tipsy .row-container {
+        flex-direction: column;
+
+        img {
+            max-width: 80% !important;
+            display: flex;
+            margin: 0 auto;
+        }
+    }
+    #cortile .row-container {
+        flex-direction: column-reverse;
+
+        img {
+            max-width: 80% !important;
+            display: flex;
+            margin: 0 auto;
         }
     }
 }
