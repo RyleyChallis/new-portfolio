@@ -5,8 +5,10 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 html {
@@ -20,8 +22,6 @@ html.no-scroll {
 }
 
 section {
-    box-sizing: border-box;
-    overflow-x: hidden;
     min-height: 100vh;
 
     &:nth-child(1),
@@ -49,10 +49,6 @@ section {
     .row-container {
         max-width: none;
     }
-}
-
-#selected .container {
-    max-width: 90%;
 }
 
 .row-container {
@@ -217,7 +213,7 @@ img {
   .trust-track {
     display: flex;
     width: max-content;
-    animation: marquee 17s linear infinite;
+    animation: marquee 16s linear infinite;
 
     &:hover {
       animation-play-state: paused;
@@ -289,7 +285,7 @@ img {
 
     .retainer-item {
         border-bottom: 1px solid #d1d1d1;
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
 
         &.active {

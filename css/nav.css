@@ -50,7 +50,6 @@ nav {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 80vw;
   transform: translateX(-100%);
   visibility: hidden;
   pointer-events: none;
@@ -82,7 +81,7 @@ nav {
   visibility: visible;
   pointer-events: auto;
   background-color: var(--white);
-  max-width: 60vw;
+  max-width: 80vw;
   width: 100%;
   z-index: 9999;
 
