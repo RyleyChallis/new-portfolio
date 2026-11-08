@@ -38,6 +38,19 @@
     }
 }
 
+@media (max-width: 892px) {
+    #comparison .comparison-wrapper {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+
+        .comparison-card {
+            width: 90% !important;
+        }
+    }
+}
+
 
 @media (max-width: 863px) {
     footer {
@@ -77,16 +90,6 @@
     #hero {
         .hero-stats {
             visibility: hidden;
-        }
-    }
-    #comparison .row-container {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        text-align: center;
-
-        .comparison-card {
-            width: 90% !important;
         }
     }
 }
