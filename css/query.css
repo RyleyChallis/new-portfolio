@@ -1,5 +1,8 @@
 @media (min-width: 1250px) {
-    a.mobile-only {
+    .desktop-only {
+        display: block;
+    }
+    .mobile-only {
         display: none;
     }
 }
@@ -10,6 +13,12 @@
     #process .row-container {
         flex-direction: column;
         gap: 48px;
+    }
+    #selected .desktop-only {
+        display: none;
+    }
+    #selected .mobile-only {
+        display: block;
     }
 
     #selected .selected-image img {
@@ -29,11 +38,11 @@
         margin: 40px 0;
     }
     #selected {
-        a.mobile-only {
+        a.mobile-btn {
             display: block;
             margin: 0 auto;
         }
-        a.desktop-only {
+        a.desktop-btn {
             display: none;
         }
     }
