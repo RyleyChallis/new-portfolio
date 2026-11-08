@@ -53,7 +53,6 @@ document.addEventListener('click', () => {
         sidebar.classList.remove('active');
         document.body.classList.remove('no-scroll');
         document.documentElement.classList.remove('no-scroll');
-        sidebarOverlay.style.visibility = "hidden";
         sidebarOverlay.classList.remove('active');
     })
 })
