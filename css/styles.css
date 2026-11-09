@@ -342,12 +342,8 @@ img {
                 ul {
                     gap: 6px;
                     list-style-type: disc;
-                    padding-left: 48px;
                 }
                 li {
-                    max-width: 80%;
-                    margin: 0 auto 0 0;
-
                     a {
                         color: inherit;
                         font-weight: 600;
