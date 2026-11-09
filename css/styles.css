@@ -148,7 +148,7 @@ img {
 
     --fs-h1: clamp(2.2rem, 6vw, 2.95rem);
     --fs-h2: clamp(1.8rem, 4.5vw, 2rem);
-    --fs-h3: clamp(1.155rem, 2.45vw, 1.35rem);
+    --fs-h3: clamp(1.215rem, 2.45vw, 1.35rem);
     --fs-h4: clamp(1rem, 2.15vw, 1.15rem);
     --fs-p: clamp(0.9rem, 2vw, 0.95rem);
     --fs-btn: clamp(0.7rem, 1vw, 0.8rem);
