@@ -153,11 +153,6 @@
         margin: 0;
         max-width: 95%;
     }
-    .faq-item {
-        &.active .faq-answer {
-            min-height: 160px !important;
-        }
-    }
     footer .footer-bottom {
         flex-direction: column;
     }
