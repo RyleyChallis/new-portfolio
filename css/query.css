@@ -127,6 +127,10 @@
     h2 {
         text-align: center;
     }
+    #process h2,
+    #selected h2 {
+        padding-top: 0;
+    }
     nav {
         padding: 0 12px;
         justify-content: flex-start;
@@ -148,6 +152,11 @@
     .retainer-item ul li {
         margin: 0;
         max-width: 95%;
+    }
+    .faq-item {
+        &.active .faq-answer {
+            min-height: 180px !important;
+        }
     }
     footer .footer-bottom {
         flex-direction: column;
