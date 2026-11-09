@@ -68,7 +68,13 @@
     color: var(--white);
 }
 
-.hero-actions,
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0 auto;
+}
+
 .final-actions {
     display: flex;
     align-items: center;

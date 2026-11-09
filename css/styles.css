@@ -259,6 +259,7 @@ img {
 }
 
 #packages {
+    scroll-margin-top: -60px;
     padding-bottom: 75px;
 
     .container {
@@ -357,6 +358,7 @@ img {
 
 #process {
     min-height: 50vh;
+    scroll-margin-top: 120px;
 
     .container {
         .row-container {
@@ -372,6 +374,7 @@ img {
 #selected {
     min-height: auto;
     padding: 75px 0 48px 0;
+    scroll-margin-top: 60px;
         
     .container {
         justify-content: flex-start;
