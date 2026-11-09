@@ -155,7 +155,7 @@
     }
     .faq-item {
         &.active .faq-answer {
-            min-height: 180px !important;
+            min-height: 160px !important;
         }
     }
     footer .footer-bottom {
