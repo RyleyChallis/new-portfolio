@@ -677,6 +677,11 @@ img {
         }
     }
 }
+#final {
+        h2 {
+            width: clamp(70%, 65vw, 70%);
+        }
+    }
 
 /* BEGINNING OF UNIVERSAL FOOTER CSS */ 
 
