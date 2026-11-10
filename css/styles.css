@@ -38,6 +38,10 @@ section {
     }
 }
 
+::placeholder {
+    font-family: var(--ff-body);
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -692,6 +696,47 @@ img {
     #hero {
         .about-text {
             max-width: 60%;
+        }
+    }
+    #form {
+        padding-bottom: 75px;
+
+        h2 {
+            padding-bottom: 24px;
+            margin: 0 auto 0 0;
+        }
+        form {
+            max-width: 65%;
+            width: 100%;
+
+            .form-container {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                input,
+                select,
+                textarea {
+                    width: 100%;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+
+                    background-color: var(--white);
+                    border: 1.8px solid rgba(0, 0, 0, 0.15);
+
+                    &:focus {
+                        border-color: rgba(0, 0, 0, 0.35);
+                        outline: none;
+                    }
+                }
+                textarea {
+                    min-height: 200px;
+                }
+            }
+        }
+        #submit-btn {
+            border-radius: 4px;
+            cursor: pointer;
         }
     }
 }
