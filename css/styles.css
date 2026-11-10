@@ -697,6 +697,13 @@ img {
         .about-text {
             max-width: 60%;
         }
+        .about-image {
+            img {
+                max-width: 350px;
+                aspect-ratio: 3 / 4;
+                object-fit: cover;
+            }
+        }
     }
     #form {
         padding-bottom: 75px;
