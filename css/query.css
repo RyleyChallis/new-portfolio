@@ -124,6 +124,12 @@
 }
 
 @media (max-width: 768px) {
+    #submit-btn {
+        max-width: 100% !important;
+    }
+    #contact-page #form form .form-container {
+        max-width: 100%;
+    }
     h2 {
         text-align: center;
     }

@@ -709,13 +709,14 @@ img {
             padding-bottom: 48px;
         }
         form {
-            max-width: 65%;
+            max-width: 100%;
             width: 100%;
 
             .form-container {
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
+                max-width: 80%;
 
                 input,
                 select,
@@ -739,6 +740,7 @@ img {
         }
         #submit-btn {
             border-radius: 4px;
+            max-width: 80%;
             cursor: pointer;
         }
     }
