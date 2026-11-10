@@ -282,6 +282,10 @@ img {
 
         max-width: 450px;
 
+        li.addon-feature {
+            font-weight: bold;
+        }
+
         .btn-primary {
             margin: 24px auto 0 0;
             font-size: 0.9rem;
