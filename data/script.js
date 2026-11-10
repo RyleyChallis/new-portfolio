@@ -147,6 +147,8 @@ form.addEventListener('submit', e => {
     })
     .then(response => {
         console.log('Success!', response);
+        submitBtn.style.backgroundColor = "#598738";
+        submitBtn.innerText = "Success!";
         form.reset();
     })
     .catch(error => {
