@@ -200,7 +200,7 @@ img {
         .hero-stats {
             display: flex;
             position: absolute;
-            bottom: 5%;
+            bottom: 10%;
             gap: clamp(1rem, 3vw, 3rem); 
             width: 90%;
             justify-content: center;
