@@ -28,14 +28,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const project = projectData[projectId];
+    if (project) {
+    document.title = `${project.title} | Ryley Challis`;
 
-  if (project) {
     const titleEl = document.getElementById('project-title');
     const subtitleEl = document.getElementById('project-subtitle');
     const metricsEl = document.getElementById('project-metrics');
     const problemEl = document.getElementById('project-problem');
     const solutionEl = document.getElementById('project-solution');
     const heroImgEl = document.getElementById('project-hero-img');
+
+    if (titleEl) titleEl.textContent = project.title;
+    if (subtitleEl) subtitleEl.textContent = project.subtitle;
+    if (metricsEl) metricsEl.textContent = project.metrics;
+    if (problemEl) problemEl.textContent = project.problem;
+    if (solutionEl) solutionEl.textContent = project.solution;
+    if (heroImgEl && (project.images?.hero || project.hero)) {
+        heroImgEl.src = project.images?.hero || project.hero;
+        heroImgEl.alt = project.title || 'Project Case Study';
+    } else {
+    console.error(`Project with ID '${projectId}' not found in data.`);
+    }
 
     if (titleEl) titleEl.textContent = project.title;
     if (subtitleEl) subtitleEl.textContent = project.subtitle;
