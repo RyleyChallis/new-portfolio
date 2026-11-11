@@ -133,6 +133,9 @@
 }
 
 @media (max-width: 768px) {
+    #announcement .row-container {
+        animation: marquee 5s linear infinite;
+    }
     #submit-btn {
         max-width: 100% !important;
     }
