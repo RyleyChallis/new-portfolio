@@ -5,6 +5,9 @@
     .mobile-only {
         display: none;
     }
+    .mobile-btn {
+        display: none;
+    }
 }
 
 @media (max-width: 1250px) {
@@ -24,6 +27,12 @@
         .project-image img {
             max-width: 100%;
         }
+    }
+    .mobile-btn {
+        display: block;
+    }
+    .desktop-btn {
+        display: none;
     }
     #challenge {
         h2 {

@@ -1,24 +1,52 @@
-[
-    {
-        "tipsy": {
-            "title": "Tipsy Kisses | Luxury Mobile Bar",
-            "subtitle": "Bespoke digital architecture engineered to capture high-ticket event inquiries and eliminate booking friction.",
-            "metrics": "Pure HTML5/CSS3/JS · Zero External Libraries",
-            "problem": "Traditional hospitality sites rely on heavy page builders and bloated WordPress themes. Slow load times and clunky layouts cause high-value private clients to bounce before submitting an inquiry. (Note: Conceptual portfolio project; no formal affiliation with Tipsy Kisses.)",
-            "solution": "Built entirely from scratch using pure HTML5, CSS3, and Vanilla JavaScript. Zero external frameworks or runtime bloat ensure instantaneous page loads, optimized WebP asset delivery, and frictionless lead capture.",
-            "images": {
-            "hero": "./assets/tipsy.webp"
-            }
-        },
-        "cortile": {
-            "title": "Il Cortile | Fine Dining",
-            "subtitle": "Bespoke digital architecture for a high-end Italian dining concept, built for speed and effortless table reservations.",
-            "metrics": "Zero-Framework Build · Native CSS Layouts",
-            "problem": "High-end dining sites often suffer from slow reservation flows, heavy third-party plugins, and poor mobile responsiveness that degrade the customer experience. (Note: Conceptual portfolio project; no formal affiliation with an active establishment.)",
-            "solution": "Engineered as a zero-bloat web platform with native CSS layout mechanics and fluid typography. Delivers instant menu access and seamless multi-device navigation without sacrificing design prestige or loading speed.",
-            "images": {
-            "hero": "./assets/cortile1.webp"
-            }
-        }
+const projectData = {
+  "tipsy": {
+    "title": "Tipsy Kisses | Luxury Mobile Bar",
+    "subtitle": "A premier mobile bar service delivering high-end cocktail experiences, bespoke drink menus, and professional bartending for private events and luxury gatherings.",
+    "metrics": "Pure HTML5/CSS3/JS · Zero External Libraries",
+    "problem": "Traditional hospitality sites rely on heavy page builders and bloated WordPress themes. Slow load times and clunky layouts cause high-value clients to bounce before submitting an inquiry.",
+    "solution": "Zero external frameworks or runtime bloat ensure instantaneous page loads, optimised WebP asset delivery, and frictionless lead capture.",
+    "hero": "assets/tipsy.webp"
+  },
+  "cortile": {
+    "title": "Il Cortile | Fine Dining Experience",
+    "subtitle": "An independent Italian restaurant concept rooted in classic courtyard dining, offering artisanal small plates, handmade pasta, and an intimate neighborhood atmosphere.",
+    "metrics": "Zero-Framework Build · Native CSS Layouts",
+    "problem": "High-end dining sites often suffer from slow reservation flows, heavy third-party plugins, and poor mobile responsiveness that degrade the customer experience.",
+    "solution": "Engineered as a zero-bloat web platform with native CSS layout mechanics and fluid typography. Delivers instant menu access and seamless multi-device navigation without sacrificing design prestige or loading speed.",
+    "hero": "assets/cortile1.webp"
+  }
+};
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get('project');
+
+    if (!projectId) {
+        console.warn('No project specified in URL parameters.');
+        return;
     }
-]
+
+    const project = projectData[projectId];
+
+  if (project) {
+    const titleEl = document.getElementById('project-title');
+    const subtitleEl = document.getElementById('project-subtitle');
+    const metricsEl = document.getElementById('project-metrics');
+    const problemEl = document.getElementById('project-problem');
+    const solutionEl = document.getElementById('project-solution');
+    const heroImgEl = document.getElementById('project-hero-img');
+
+    if (titleEl) titleEl.textContent = project.title;
+    if (subtitleEl) subtitleEl.textContent = project.subtitle;
+    if (metricsEl) metricsEl.textContent = project.metrics;
+    if (problemEl) problemEl.textContent = project.problem;
+    if (solutionEl) solutionEl.textContent = project.solution;
+    if (heroImgEl && (project.images?.hero || project.hero)) {
+      heroImgEl.src = project.images?.hero || project.hero;
+      heroImgEl.alt = project.title || 'Project Case Study';
+    }
+  } else {
+    console.error(`Project with ID '${projectId}' not found in data.`);
+  }
+});
