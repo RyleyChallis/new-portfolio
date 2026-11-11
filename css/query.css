@@ -1,3 +1,55 @@
+@media (hover: hover) {
+    .btn-primary:hover,
+    #submit-btn:hover {
+        background-color: var(--black);
+    }
+    .btn-secondary:hover {
+        opacity: 1;
+    }
+    .btn-secondary:hover svg {
+        transform: translateX(3px);
+    }
+    .btn-tertiary:hover {
+        background-color: var(--black);
+        color: var(--white);
+    }
+    .final-actions {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin: 0 auto;
+
+        .btn-secondary {
+            border: 1.8px solid var(--white);
+            color: var(--white);
+            padding: 15px 23px;
+
+            &:hover {
+                border-color: var(--black);
+                background-color: var(--black);
+                color: var(--white);
+                opacity: 1;
+            }
+        }
+    }
+    #final .btn-tertiary:hover {
+        background-color: var(--grey);
+    }
+    .retainer-button:hover,
+    .faq-question:hover {
+        background-color: #e0e0e0;
+    }
+    #final a:hover {
+        filter: brightness(80%);
+    }
+    .footer-links ul li a:hover {
+        color: var(--white);
+    }
+    .nav-links li a:hover {
+        color: var(--black);
+    }
+}
+
 @media (min-width: 1250px) {
     .desktop-only {
         display: block;

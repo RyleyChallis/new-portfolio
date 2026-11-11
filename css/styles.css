@@ -323,10 +323,6 @@ img {
             text-transform: uppercase;
             cursor: pointer;
             transition: background-color 0.3s ease;
-
-            &:hover {
-                background-color: #e0e0e0;
-            }
         }
             &.active .retainer-block {
                 max-height: 900px;
@@ -521,10 +517,6 @@ img {
                 text-transform: uppercase;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
-
-                &:hover {
-                    background-color: #e0e0e0;
-                }
             }
             .faq-answer {
                 max-height: 0;
@@ -579,10 +571,6 @@ img {
 
     a {
         margin: 48px auto 0 auto;
-
-        &:hover {
-            filter: brightness(80%);
-        }
     }
 }
 
@@ -805,10 +793,6 @@ footer {
                             text-decoration: none;
                             white-space: nowrap;
                             transition: color 0.2s ease;
-
-                            &:hover {
-                                color: var(--white);
-                            }
                         }
                     }
                 }
