@@ -493,13 +493,6 @@ img {
             text-align: center;
         }
 
-        p.subtitle {
-            padding-bottom: 75px;
-            max-width: clamp(85%, 87.5vw, 90%);
-            margin: 0 auto;
-            text-align: center;
-        }
-
         .faq-item {
             border-bottom: 1px solid #d1d1d1;
             margin-left: auto;

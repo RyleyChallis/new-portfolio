@@ -103,7 +103,7 @@
     }
 
     #selected .selected-image img {
-        max-width: 80% !important; 
+        max-width: 100% !important; 
         display: flex;
         margin: 0 auto;
     }
@@ -133,7 +133,7 @@
         flex-direction: column;
 
         img {
-            max-width: 80% !important;
+            max-width: 100% !important;
             display: flex;
             margin: 0 auto;
         }
@@ -153,8 +153,8 @@
     #comparison .comparison-wrapper {
         flex-direction: column;
         width: 100%;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
 
         .comparison-card {
             width: 90% !important;
@@ -182,11 +182,20 @@
             max-width: 80%;
         }
     }
+    p.subtitle {
+        padding-bottom: 75px;
+        max-width: clamp(85%, 87.5vw, 90%);
+        margin: 0 auto;
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
     #announcement .row-container {
         animation: marquee 5s linear infinite;
+    }
+    #comparison .row-container {
+        padding-left: 0;
     }
     #submit-btn {
         max-width: 100% !important;
@@ -195,7 +204,14 @@
         max-width: 100%;
     }
     h2 {
-        text-align: center;
+        text-align: left !important;
+        margin-left: 0;
+    }
+    p.subtitle {
+        text-align: left;
+        margin-left: 0;
+        padding-left: 12px;
+        padding-bottom: 48px;
     }
     #process h2,
     #selected h2 {
@@ -231,6 +247,38 @@
         .hero-stats {
             visibility: hidden;
         }
+    }
+    .faq-question {
+        text-align: left;
+    }
+    #tipsy ul,
+    #cortile ul {
+        padding-left: 24px !important;
+    }
+    #final h2 {
+        padding-left: 0;
+    }
+    #portfolio-page {
+        #final h2 {
+            max-width: 90%;
+        }
+        #final p {
+            max-width: 90%;
+        }
+    }
+    #contact-page {
+        p.subtitle {
+            padding-left: 0;
+        }
+    }
+    #final p,
+    #final a {
+        margin-left: 0;
+        text-align: left;
+    }
+    footer .container {
+        padding-left: 0;
+        max-width: 100%;
     }
 }
 
