@@ -548,17 +548,12 @@ img {
                 }
             }
 
-            &:first-child.active {
-                padding-bottom: 22px;
-            }
-
             &.active {
                 background-color: #e0e0e0;
             }
 
             &.active .faq-answer {
-                min-height: 110px;
-                padding-bottom: 24px;
+                min-height: 90px;
             }
         }
     }
