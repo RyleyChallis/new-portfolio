@@ -323,12 +323,16 @@ img {
             text-transform: uppercase;
             cursor: pointer;
             transition: background-color 0.3s ease;
-        }
-            &.active .retainer-block {
-                max-height: 900px;
-                padding: 0 0 0 48px;
-                overflow: auto;
+        
+            &:hover {
+                background-color: #e0e0e0;
             }
+        }
+        &.active .retainer-block {
+            max-height: 900px;
+            padding: 0 0 0 48px;
+            overflow: auto;
+        }
         
         .retainer-block {
             max-height: 0;
