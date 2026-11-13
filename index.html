@@ -426,10 +426,14 @@
     <script>
         window.addEventListener('DOMContentLoaded', () => {
         const path = window.location.pathname;
-        
-        if (path.endsWith('.html')) {
+
+        // If it's the root or index page, display /home instead of /index
+        if (path === '/' || path === '/index.html' || path === '/index') {
+            window.history.replaceState({}, '', '/home' + window.location.search + window.location.hash);
+        } 
+        // Otherwise, strip .html from all other pages (e.g., /contact.html -> /contact)
+        else if (path.endsWith('.html')) {
             const cleanPath = path.slice(0, -5);
-            
             window.history.replaceState({}, '', cleanPath + window.location.search + window.location.hash);
         }
         });
