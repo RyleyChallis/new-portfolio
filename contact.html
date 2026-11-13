@@ -179,6 +179,16 @@
         if (window.history.replaceState) {
             window.history.replaceState(null, null, window.location.href);
         }
+        
+        window.addEventListener('DOMContentLoaded', () => {
+        const path = window.location.pathname;
+        
+        if (path.endsWith('.html')) {
+            const cleanPath = path.slice(0, -5);
+            
+            window.history.replaceState({}, '', cleanPath + window.location.search + window.location.hash);
+        }
+        });
     </script>
     <script src="data/script.js" defer></script>
     <script src="data/contact.js" defer></script>
