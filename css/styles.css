@@ -695,6 +695,7 @@ img {
         }
         p.subtitle {
             padding-bottom: 48px;
+            margin-left: 0;
         }
         form {
             max-width: 100%;
