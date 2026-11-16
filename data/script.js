@@ -56,3 +56,33 @@ document.addEventListener('click', () => {
         sidebarOverlay.classList.remove('active');
     })
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+  const revealElements = document.querySelectorAll('.reveal');
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0,
+    rootMargin: '0px 0px -10% 0px'
+  });
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      revealElements.forEach((el) => {
+        // If the element is inside #hero, reveal it immediately on load (respecting any delay classes)
+        if (el.closest('#hero')) {
+          el.classList.add('is-visible');
+        } else {
+          revealObserver.observe(el);
+        }
+      });
+    });
+  });
+});
