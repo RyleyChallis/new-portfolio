@@ -585,7 +585,7 @@ img {
         text-align: center;
     }
 
-    a {
+    div.reveal {
         margin: 48px auto 0 auto;
     }
 }

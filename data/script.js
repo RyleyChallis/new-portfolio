@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {
     root: null,
     threshold: 0,
-    rootMargin: '0px 0px -10% 0px'
+    rootMargin: '0px 0px -20% 0px'
   });
 
   requestAnimationFrame(() => {
