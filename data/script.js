@@ -58,31 +58,39 @@ document.addEventListener('click', () => {
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-  const revealElements = document.querySelectorAll('.reveal');
+    const revealElements = document.querySelectorAll('.reveal');
 
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        const visibleEntries = entries
+            .filter(entry => entry.isIntersecting)
+            .sort((a, b) => a.target.getBoundingClientRect().top - b.target.getBoundingClientRect().top);
+
+        visibleEntries.forEach((entry, index) => {
+            const el = entry.target;
+            const delay = index * 0.1;
+            el.style.transitionDelay = `${delay}s`;
+            el.classList.add('is-visible');
+            observer.unobserve(el);
+        });
+    }, {
+        root: null,
+        threshold: 0,
+        rootMargin: '0px 0px -15% 0px'
     });
-  }, {
-    root: null,
-    threshold: 0,
-    rootMargin: '0px 0px -20% 0px'
-  });
 
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      revealElements.forEach((el) => {
-        // If the element is inside #hero, reveal it immediately on load (respecting any delay classes)
+    revealElements.forEach((el) => {
         if (el.closest('#hero')) {
-          el.classList.add('is-visible');
+            el.classList.add('is-visible');
         } else {
-          revealObserver.observe(el);
+            revealObserver.observe(el);
         }
-      });
     });
-  });
 });
+
+document.addEventListener('click', () => {
+  const toggleBtn = document.getElementById('toggle-btn');
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  })
+})
